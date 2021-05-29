@@ -5,7 +5,7 @@ import store from '../services/Store'
 const Increment = observer(() => {
     const handleIncrement = () => {
         let value = store.count + 1;
-        store.setCount(value);
+        store.setStore("count",value);
     };
     return <button onClick={handleIncrement}>Increment</button>;
 });

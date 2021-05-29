@@ -2,17 +2,16 @@ import { makeAutoObservable, observable, action } from "mobx";
 
 class Store {
     count = 0;
-
+    nome='kalebe'
     constructor() {
         makeAutoObservable(this, {
             count: observable,
-            increment: action,
-            decrement: action,
+            setStore:action
         });
     }
 
-    setCount(value) {
-        this.count = value;
+    setStore(elm,value) {
+        this[elm] = value;
     }
 }
 export default new Store();

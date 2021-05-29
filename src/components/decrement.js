@@ -5,7 +5,7 @@ import store from '../services/Store'
 const Decrement = observer(() => {
     const handleDecrement = () => {
         let value = store.count - 1;
-        store.setCount(value);
+        store.setStore("count",value);
     };
     return <button onClick={handleDecrement}>Decrement</button>;
 });
